@@ -1,0 +1,63 @@
+.comp-cart-sum {
+  .cart-sum {
+    padding: 20px 24px;
+    border: 1px solid var(--platinum);
+    border-radius: 4px;
+  }
+
+  .cart-sum-top {
+    .cart-sum-ttl {
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .cart-sum-list {
+      padding: 20px 0;
+      display: grid;
+      gap: 10px;
+
+      .cart-sum-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .cart-sum-item-lbl {
+        color: var(--payne-gray);
+      }
+    }
+  }
+
+  .cart-sum-btm {
+    border-top: 1px solid var(--platinum);
+    .cart-sum-total {
+      padding: 16px 0 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cart-sum-total-val {
+      font-weight: 600;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 1400px){
+  .comp-cart-sum{
+    .cart-sum{
+      padding: 16px 20px;
+    }
+  }
+}
+
+@media(max-width: 1200px){
+  .comp-cart-sum{
+    .cart-sum{
+      padding: 12px 16px;
+    }
+  }
+}

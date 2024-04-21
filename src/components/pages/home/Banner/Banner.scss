@@ -1,0 +1,317 @@
+.comp-home-banner {
+  .segment-banner {
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    column-gap: 24px;
+  }
+
+  .home-banner-single {
+    width: 64%;
+    background-color: var(--antiflash-white);
+    border-radius: 6px;
+    padding: 36px 56px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .banner-item {
+      display: flex;
+      align-items: center;
+      column-gap: 36px;
+
+      .banner-item-text-t {
+        color: #2484c2;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-left: 32px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: calc(100% + 8px);
+          width: 24px;
+          height: 2px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: var(--celes-blue);
+        }
+      }
+
+      .banner-item-l {
+        max-width: 356px;
+      }
+
+      .banner-item-ttl {
+        font-size: 48px;
+        font-weight: 600;
+      }
+
+      .banner-item-text {
+        color: var(--outerspace);
+        font-size: 18px;
+        margin-top: 16px;
+        margin-bottom: 24px;
+      }
+
+      .banner-item-img {
+        max-width: 368px;
+        position: relative;
+      }
+
+      .banner-item-tag.price {
+        color: var(--white);
+        width: 100px;
+        height: 100px;
+        border: 4px solid var(--white);
+        background: var(--celes-blue);
+        font-size: 22px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    bottom: -10px;
+    position: relative;
+  }
+
+  .home-banner-group {
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    .banner-item {
+      &:nth-child(1) {
+        background-color: var(--eerie-black);
+        border-radius: 6px;
+        padding: 46px 40px;
+        position: relative;
+        min-height: 248px;
+        overflow: hidden;
+        display: flex;
+        column-gap: 24px;
+
+        .banner-item-l {
+          max-width: 156px;
+        }
+
+        .btn {
+          font-size: 14px;
+        }
+
+        .banner-item-text-t {
+          color: var(--jonquil);
+          font-weight: 500;
+          margin-bottom: 5px;
+          text-transform: uppercase;
+        }
+
+        .banner-item-ttl {
+          color: var(--white);
+          font-weight: 600;
+          font-size: 24px;
+          margin-bottom: 18px;
+        }
+
+        .banner-item-img {
+          max-width: 312px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+
+        .banner-item-tag.discount {
+          bottom: calc(100% - 10%);
+          right: 24px;
+          position: absolute;
+          background-color: var(--citrine);
+          min-width: 100px;
+          padding: 8px 16px;
+          min-height: 40px;
+          text-transform: uppercase;
+          border-radius: 2px;
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+      &:nth-child(2) {
+        background-color: var(--antiflash-white);
+        border-radius: 6px;
+        padding: 40px 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 20px;
+
+        .banner-item-img {
+          max-width: 160px;
+        }
+        .banner-item-ttl {
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 12px;
+          padding-right: 2px;
+        }
+        .banner-item-tag.price {
+          font-size: 18px;
+          font-weight: 600;
+          color: var(--celes-blue);
+          font-weight: 600;
+          margin-bottom: 20px;
+          padding: 0;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.comp-banner-slider {
+  width: 100%;
+
+  // swiper js
+  .swiper {
+    padding: 20px 0;
+  }
+  .swiper-pagination-bullet {
+    background-color: var(--eerie-black);
+  }
+  .swiper-pagination {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1400px) {
+  .comp-home-banner {
+    .home-banner-single {
+      padding: 12px 32px;
+
+      .banner-item {
+        column-gap: 20px;
+      }
+    }
+    .home-banner-group {
+      .banner-item {
+        padding: 32px !important;
+
+        &:nth-child(1) {
+          .banner-item-img {
+            max-width: 200px;
+          }
+        }
+
+        &:nth-child(2) {
+          .banner-item-tag.price {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .comp-home-banner {
+    .segment-banner {
+      gap: 16px;
+      flex-direction: column;
+    }
+    .home-banner-single {
+      padding: 12px 20px;
+      width: 100%;
+      .banner-item {
+        justify-content: space-between;
+        .banner-item-l,
+        .banner-item-r {
+          width: 50%;
+          max-width: 100%;
+        }
+      }
+    }
+    .home-banner-group {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 16px;
+      .banner-item {
+        padding: 20px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .comp-home-banner {
+    .home-banner-single {
+      .banner-item {
+        .banner-item-ttl {
+          font-size: 36px;
+        }
+        .banner-item-text {
+          margin-top: 12px;
+          margin-bottom: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+    .home-banner-group {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .comp-home-banner {
+    .home-banner-single {
+      .banner-item {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .banner-item-l,
+        .banner-item-r {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .comp-home-banner {
+    .home-banner-group {
+      .banner-item {
+        &:nth-child(1) {
+          flex-direction: column;
+          row-gap: 40px;
+
+          .banner-item-l {
+            max-width: 100%;
+          }
+          .banner-item-r {
+            .banner-item-img {
+              position: relative;
+              margin-left: auto;
+              margin-right: -20px;
+              margin-bottom: -20px;
+            }
+          }
+        }
+
+        &:nth-child(2){
+          grid-template-columns: 100%;
+        }
+      }
+    }
+  }
+}

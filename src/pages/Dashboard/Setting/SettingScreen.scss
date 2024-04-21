@@ -1,0 +1,271 @@
+.pg-setting {
+  display: grid;
+  row-gap: 24px;
+
+  .setting-block {
+    border: 1px solid #e4e7e9;
+    border-radius: 4px;
+  }
+
+  .setting-block-head {
+    padding: 16px 24px;
+    border-bottom: 1px solid #e4e7e9;
+  }
+
+  .setting-block-ttl {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .setting-block-content {
+    padding: 24px;
+  }
+
+  .setting-block-account {
+    .setting-block-content {
+      display: grid;
+      grid-template-columns: 176px auto;
+      gap: 24px;
+      align-items: start;
+    }
+  }
+
+  .setting-account-img {
+    width: 176px;
+    height: 176px;
+    overflow: hidden;
+    border-radius: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  .form-elems-wrap {
+    display: grid;
+    gap: 16px;
+  }
+
+  .form-elem-cols-2,
+  .form-elem-subcols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .form-elem-cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .form-elem {
+    display: grid;
+    row-gap: 8px;
+
+    .form-lbl {
+      .form-lbl-subtext {
+        color: #5f6c72;
+      }
+    }
+
+    .form-ctrl {
+      width: 100%;
+      border: 1px solid #e4e7e9;
+      border-radius: 2px;
+      height: 44px;
+      width: 100%;
+      padding: 0 16px;
+      color: #475156;
+      outline: 0;
+
+      &::placeholder {
+        color: #929fa5;
+      }
+    }
+  }
+
+  .form-select {
+    border: 1px solid #e4e7e9;
+    border-radius: 2px;
+    height: 44px;
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    select {
+      appearance: none;
+      border: 0;
+      color: #475156;
+      outline: 0;
+      padding: 0 16px;
+      flex: 1;
+      border-radius: 2px;
+    }
+
+    .select-icon {
+      pointer-events: none;
+      color: #adb7bc;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .form-btn {
+    margin-top: 24px;
+  }
+
+  .setting-block-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .form-ctrl-wrap {
+    position: relative;
+  }
+
+  .password-toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 1400px) {
+  .pg-setting {
+    .setting-block-account {
+      .setting-block-content {
+        grid-template-columns: 140px auto;
+      }
+    }
+
+    .setting-account-img {
+      width: 140px;
+      height: 140px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .pg-setting {
+    gap: 20px;
+
+    .setting-block-account {
+      .setting-block-content {
+        grid-template-columns: 100%;
+      }
+    }
+
+    .setting-account-img {
+      width: 120px;
+      height: 120px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .setting-block-head {
+      padding: 12px 20px;
+    }
+
+    .setting-block-content {
+      padding: 16px;
+    }
+
+    .setting-block-group {
+      gap: 16px;
+    }
+
+    .form-btn {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .pg-setting {
+    .setting-block-account {
+      .form-elem-cols-2 {
+        &.has-subcols {
+          grid-template-columns: 1fr 2fr;
+        }
+      }
+    }
+
+    .form-elem {
+      row-gap: 6px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pg-setting {
+    .setting-block-billing,
+    .setting-block-shipping {
+      .form-elem-cols-2 {
+        grid-template-columns: 100%;
+      }
+    }
+
+    .setting-block-group {
+      gap: 12px;
+    }
+
+    .setting-block-head {
+      padding: 12px;
+    }
+
+    .setting-block-content {
+      padding: 12px;
+    }
+
+    .form-elems-wrap {
+      gap: 12px;
+    }
+
+    .form-elem-cols-2,
+    .form-elem-cols-3 {
+      gap: 12px;
+    }
+
+    .form-elem {
+      row-gap: 4px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .pg-setting {
+    .setting-block-account {
+      .form-elem-cols-2 {
+        grid-template-columns: 100%;
+        &.has-subcols {
+          grid-template-columns: 100%;
+        }
+
+        .form-elem-subcols-2 {
+          grid-template-columns: 100%;
+        }
+      }
+    }
+
+    .setting-block-group {
+      grid-template-columns: 100%;
+    }
+
+    .setting-block-password {
+      .form-elem-cols-3 {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.segment-shop-gridbox {
+  padding: 40px 0 72px 0;
+  display: grid;
+  grid-template-columns: 312px auto;
+  gap: 24px;
+}
+
+@media (max-width: 1400px) {
+  .segment-shop-gridbox {
+    grid-template-columns: 260px auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .segment-shop-gridbox {
+    column-gap: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .segment-shop-gridbox {
+    grid-template-columns: 100%;
+  }
+}

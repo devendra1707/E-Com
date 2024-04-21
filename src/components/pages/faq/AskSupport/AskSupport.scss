@@ -1,0 +1,83 @@
+.comp-ask-support {
+  .segment-ask-support {
+    padding: 32px;
+    background: #fbf4ce;
+    border-radius: 4px;
+  }
+
+  .ask-support-ttl {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .ask-support-lead {
+    color: var(--outerspace);
+  }
+  .ask-support-form {
+    .form-elems-wrap {
+      display: grid;
+      row-gap: 12px;
+      margin: 24px 0;
+    }
+
+    .form-elem {
+      .form-ctrl {
+        border: 1px solid var(--vanilla);
+        border-radius: 2px;
+        height: 44px;
+        padding: 0 16px;
+        background: var(--white);
+        width: 100%;
+        outline: 0;
+
+        &::placeholder {
+          color: var(--slate-gray);
+        }
+      }
+
+      textarea {
+        &.form-ctrl {
+          padding: 12px 16px;
+          height: 80px;
+          resize: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width: 1200px){
+  .comp-ask-support{
+    .segment-ask-support{
+      padding: 20px;
+    }
+
+    .ask-support-form{
+      .form-elems-wrap{
+        margin: 20px 0;
+        row-gap: 10px;
+      }
+    }
+  }
+}
+
+@media(max-width: 992px){
+  .comp-ask-support{
+    .segment-ask-support{
+      padding: 16px;
+    }
+
+    .ask-support-ttl{
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .ask-support-form{
+      .form-elems-wrap{
+        margin: 12px 0;
+        row-gap: 8px;
+      }
+    }
+  }
+}

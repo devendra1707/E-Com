@@ -1,0 +1,139 @@
+.comp-faq-collapsible {
+  margin-top: 40px;
+
+  .faq-collapsible-list {
+    display: grid;
+    row-gap: 20px;
+  }
+
+  .faq-collapsible-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--platinum);
+    border-radius: 4px;
+    padding: 18px 24px;
+    cursor: pointer;
+    column-gap: 4px;
+
+    .collapsible-head-ttl {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .collapsible-icon-btn {
+      color: var(--slate-gray);
+
+      &:hover {
+        color: var(--pumpkin);
+      }
+    }
+
+    &.active {
+      background: var(--white);
+      background: var(--pumpkin);
+
+      .collapsible-head-ttl,
+      .collapsible-icon-btn {
+        color: var(--white);
+      }
+    }
+  }
+
+  .faq-collapsible-item {
+    display: grid;
+  }
+
+  .faq-collapsible-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 300ms linear;
+
+    .content-stylings {
+      padding: 24px;
+      border-radius: 4px;
+      box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.12);
+      border: 1px solid var(--platinum);
+      margin-top: 20px;
+    }
+
+    &.show {
+      max-height: 100%;
+    }
+  }
+}
+
+
+@media(max-width: 1200px){
+  .comp-faq-collapsible{
+    margin-top: 32px;
+
+    .faq-collapsible-head{
+      padding: 16px 20px;
+
+      .collapsible-head-ttl{
+        font-size: 16px;
+      }
+    }
+
+    .faq-collapsible-list{
+      row-gap: 16px;
+    }
+
+    .faq-collapsible-body{
+      .content-stylings{
+        padding: 20px;
+      }
+    }
+  }
+}
+
+@media(max-width: 992px){
+  .comp-faq-collapsible{
+    margin-top: 24px;
+
+    .faq-collapsible-head{
+      padding: 12px;
+
+      .collapsible-icon-btn{
+        svg{
+          width: 16px;
+        }
+      }
+    }
+
+    .faq-collapsible-list{
+      row-gap: 10px;
+    }
+
+    .faq-collapsible-body{
+      .content-stylings{
+        margin-top: 12px;
+        padding: 12px;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px){
+  .comp-faq-collapsible{
+    .faq-collapsible-body{
+      .content-stylings{
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+@media(max-width: 576px){
+  .comp-faq-collapsible{
+    margin-top: 20px;
+    
+    .faq-collapsible-head{
+      padding: 8px 12px;
+      .collapsible-head-ttl{
+        font-size: 14px;
+      }
+    }
+  }
+}
